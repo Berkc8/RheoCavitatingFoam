@@ -1,0 +1,62 @@
+# 1 "Make/options"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 8 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 8 "<command-line>" 2
+# 1 "Make/options"
+sinclude $(GENERAL_RULES)/mplib$(WM_MPLIB)
+sinclude $(RULES)/mplib$(WM_MPLIB)
+
+EXE_INC = -IVoF -I$(LIB_SRC)/transportModels/twoPhaseMixture/lnInclude -I$(LIB_SRC)/transportModels/interfaceProperties/lnInclude -I$(LIB_SRC)/transportModels -I$(LIB_SRC)/transportModels/incompressible/lnInclude -I$(LIB_SRC)/transportModels/interfaceProperties/lnInclude -I$(LIB_SRC)/finiteVolume/lnInclude -I$(LIB_SRC)/thermophysicalModels/barotropicCompressibilityModel/lnInclude -I$(LIB_SRC)/dynamicFvMesh/lnInclude -I$(LIB_SRC)/meshTools/lnInclude -I$(LIB_SRC)/sampling/lnInclude -I/home/berk/proje/yeni/rheocavitatingFoam2/libs/constitutiveEquations/lnInclude -I/home/berk/proje/yeni/rheocavitatingFoam2/libs/gaussDefCmpwConvectionScheme/lnInclude -I/home/berk/proje/yeni/rheocavitatingFoam2/libs/boundaryConditions/lnInclude -I/home/berk/proje/yeni/rheocavitatingFoam2/libs/postProcessing/postProcUtils/lnInclude -I/home/berk/proje/yeni/rheocavitatingFoam2/libs/fvmb/lnInclude -I/home/berk/proje/yeni/rheocavitatingFoam2/libs/sparseMatrixSolvers/lnInclude -isystem$(EIGEN_RHEO) -isystem$(PETSC_DIR)/$(PETSC_ARCH)/include -isystem$(PETSC_DIR)/include $(PFLAGS) $(PINC)
+# 26 "Make/options"
+ 
+EXE_LIBS = -L$(FOAM_USER_LIBBIN) -limmiscibleIncompressibleTwoPhaseMixture -lturbulenceModels -lincompressibleTurbulenceModels -lfiniteVolume -ldynamicFvMesh -lfvOptions -lmeshTools -lsampling -lbarotropicCompressibilityModel -L$(FOAM_USER_LIBBIN) -lconstitutiveEquations -L$(FOAM_USER_LIBBIN) -lgaussDefCmpwConvectionSchemes -L$(FOAM_USER_LIBBIN) -lBCRheoTool -L$(FOAM_USER_LIBBIN) -lpostProcessingRheoTool -L$(FOAM_USER_LIBBIN) -lfvmb -L$(FOAM_USER_LIBBIN) -lsparseMatrixSolvers -L$(PETSC_DIR)/$(PETSC_ARCH)/lib -lHYPRE -L$(PETSC_DIR)/$(PETSC_ARCH)/lib -lpetsc $(PLIBS)
